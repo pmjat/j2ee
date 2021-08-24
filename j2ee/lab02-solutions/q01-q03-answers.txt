@@ -1,0 +1,66 @@
+
+Q01
+---------------------------------
+Fields:
+	double sum;
+	double maximum;
+	int count;
+
+Constructors:
+	DataSet();
+
+Accessor:
+	double getAverage();
+	double getMaximum();
+
+Mutator:
+	add(double x);
+
+
+Q02
+---------------------------------
+Fields:
+    String isbn;
+    String title;
+    double price;
+	
+Constructors:
+    Book();
+    Book(String isbn, String title, double price);
+
+Accessor:
+    String getIsbn();
+    double getPrice();
+    String getTitle();
+    String toString();
+
+Mutator:
+    void setIsbn(String isbn);
+    void setPrice(double price);
+    void setTitle(String new_title);
+	
+	
+Q03
+---------------------------------
+Fields:
+    double a;
+    double b;
+    double c;
+	
+Constructors:
+    Triangle();
+    Triangle(double a, double b, double c) 
+				throws InvalidData;
+
+Accessor:
+    double area();
+    double perimeter();
+    double getA();
+    double getB();
+    double getC();
+
+Mutator:
+    void resize(double new_a, double new_b, double new_c) 
+                   throws InvalidData;
+
+
