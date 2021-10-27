@@ -4,16 +4,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Factorial Computer - Ajax</title>
 <script>
-    function getFact() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            document.getElementById("fact_resp").innerHTML = xhttp.responseText;
-        }
+function getFact() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("fact_resp").innerHTML = xhttp.responseText;
+		}
     };
-    var url = "FactorialServlet2?num=5"; //+ document.getElementByName("num").toString();
-            //.forms[0]["num"].valueOf();
-    //alert( url );
+    var url = "FactorialServlet2?num=5"; 
     xhttp.open("GET", url , true);
     xhttp.send();
 }
