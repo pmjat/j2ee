@@ -11,7 +11,6 @@ function getFact() {
 			document.getElementById("fact_resp").innerHTML = xhttp.responseText;
 		}
     };
-    var num = 5;
 	var num = document.forms["factform"]["num"].value;    
     var url = "FactorialServlet2?num=" + num; 
     xhttp.open("GET", url , true);
