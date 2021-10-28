@@ -11,19 +11,22 @@ function getFact() {
 			document.getElementById("fact_resp").innerHTML = xhttp.responseText;
 		}
     };
-    var url = "FactorialServlet2?num=5"; 
+    var num = 5;
+	var num = document.forms["factform"]["num"].value;    
+    var url = "FactorialServlet2?num=" + num; 
     xhttp.open("GET", url , true);
     xhttp.send();
 }
 </script>    
     </head>
     <body>
-            <label>Enter a Number:</label>           
-            <input type="text" name="num"/> <br />
-            <br />
-            <button type="button" onclick="getFact()">Compute Factorial</button>
-            <p />
-            <label>Factorial Response:</label>           
-            <div id="fact_resp"><h2>...wait ...</h2></div>
+    <form name="factform">
+        <label>Enter a Number:</label>           
+        <input type="text" name="num"/> <br /><br />
+        <button type="button" onclick="getFact()">Compute Factorial</button>
+        <p />
+        <label>Factorial Response:</label>           
+        <div id="fact_resp"><h2>...wait ...</h2></div>
+    </form>
     </body>
 </html>
