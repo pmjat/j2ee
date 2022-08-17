@@ -21,8 +21,11 @@ public class BankClientConsole {
 	        acc_balance = service.withdraw(10002, 5000);
 	        //Show updated balance of the account
 	        System.out.println( acc_balance );
-	
-	        //Close the acc no 1002
+
+	        //Get Account Details of acc no 10002
+	        System.out.println( service.getAccountInfo( 10002 ) );
+	        
+	        //Close the acc no 10002
 	        acc_balance = service.close( 10002 );
 	        //display the details to closed account
 	        System.out.println( acc_balance );
