@@ -59,7 +59,6 @@ public class BankService {
 	}	
 	
 	//Close an Account
-	//public double close( long acc_no ) {
 	public double close( long accno )
 				throws AccountNotFound {
 		BankAccount acc = accounts.remove( accno );
