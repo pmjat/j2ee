@@ -14,19 +14,21 @@ public class BankClientConsole {
         try {
         
 	        //Now suppose you want to depsoit 3000 to accno 10003.
-	        service.deposit( 10003, 3000 );
-	
-	        //Show new balance of the account
-	        System.out.println( service.getBalance( 10003 ) );
+	        double acc_balance = service.deposit( 10003, 3000 );
+	        //Show updated balance of the account
+	        System.out.println( acc_balance );
 	        	        
-	        service.withdraw(10002, 5000);
+	        acc_balance = service.withdraw(10002, 5000);
+	        //Show updated balance of the account
+	        System.out.println( acc_balance );
 	
 	        //Close the acc no 1002
-	        double bal_10002 = service.close( 10002 );
+	        acc_balance = service.close( 10002 );
 	        //display the details to closed account
-	        System.out.println( bal_10002 );
+	        System.out.println( acc_balance );
 	        
-	        service.withdraw(10001, 2000);	        
+	        acc_balance = service.withdraw(10001, 2000);	        
+	        System.out.println( acc_balance );
 	        
         }
         catch( Exception e) {
