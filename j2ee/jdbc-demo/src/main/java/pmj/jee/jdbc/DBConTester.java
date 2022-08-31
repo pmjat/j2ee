@@ -10,10 +10,10 @@ public class DBConTester1 {
 		try {
 
 			Connection con = DBCon.getConnection();
-			con.setSchema( "company3" );
+			con.setSchema( "company" );
 
 			Statement stmt = con.createStatement();
-			String str_sql = "SELECT * FROM company3.Employee AS e JOIN company3.Employee AS s "
+			String str_sql = "SELECT * FROM Employee AS e JOIN Employee AS s "
 					+ " ON (e.super_eno=s.eno) WHERE e.dno=4";
 			ResultSet rs = stmt.executeQuery( str_sql );
 			while ( rs.next() ) {
@@ -27,9 +27,6 @@ public class DBConTester1 {
 		catch (SQLException e) {
 			System.out.println("Error Executing SQL statement: " + e.getMessage());
 		}
-		//catch (ClassNotFoundException e) {
-		//    System.out.println("Driver Not Found: " + e.getMessage());
-		//}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
