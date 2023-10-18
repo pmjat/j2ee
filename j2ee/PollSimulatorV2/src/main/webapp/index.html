@@ -1,0 +1,44 @@
+<html>
+<head>
+	<style>
+		body, input {
+			font-family: verdana,arial,sans-serif;
+			font-size:18px;
+		}
+		table {
+		  width: 50%;
+		}
+</style>
+
+
+</head>
+<body>
+	<p />&nbsp;
+	<p />&nbsp;
+	<form action="Controller" method="post">
+	<table class="center">
+		<tr><td>
+			Student ID:
+			<input type="text" id="sid" name="sid" value="202012001" />
+			<br /> <br />
+		</td></tr>
+		<tr><td>
+			<input type="radio" id="c1" name="cand" value="1" />
+			<label for="c1">Deep Goyal</label><br /> <br />
+			<input type="radio" id="c2" name="cand" value="2" />
+			<label for="c2">Sneha Mohan</label><br /> <br />
+			<input type="radio" id="c3" name="cand" value="3" />
+			<label for="c3">Praveen Shah</label><br /> <br />
+			<input type="radio" id="c4" name="cand" value="4" />
+			<label for="c4">Akshay Singh</label><br /><br />
+			<input type="radio" id="c5" name="cand" value="5" />
+			<label for="c5">Somin Majumdar</label><br /><br />
+		</td></tr>
+		<tr><td>
+			<input type="hidden" id="action" name="action" value="vote" />
+			<input type="submit" value="Vote" />
+		</td></tr>
+	</table>
+	</form>
+</body>
+</html>
